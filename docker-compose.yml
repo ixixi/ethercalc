@@ -1,0 +1,11 @@
+redis:
+  image: redis:latest
+  command: redis-server --appendonly yes
+  volumes:
+    - <host-directory>:/data
+ethercalc:
+  image: audreyt/ethercalc
+  ports:
+    - "8000:8000"
+  link:
+    - redis
