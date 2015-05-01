@@ -7,5 +7,5 @@ ethercalc:
   image: audreyt/ethercalc
   ports:
     - "8000:8000"
-  link:
+  links:
     - redis
